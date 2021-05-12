@@ -5,8 +5,7 @@ TrustBox
 
 <p>Your mission is to get the flag. How surprising! This time we provide part of the code used by our bot to understand what are the requirements of the page you have to craft (see below). In a nutshell, the bot will enter the flag inside an <code>input</code> element with <code>id="flag"</code> and submit it if there is a <code>script</code> element with <code>id="pwn"</code> and a non-empty <code>src</code> attribute. Notice that the script and the input elements must be inserted in the top frame of the root page of the application.</p>
 
-<pre>
-<code>
+```Javascript
 const executeBot = (targeturl) =&gt;
     runBrowser(async (browser, page) =&gt; {
         // Listen for browser events
@@ -40,5 +39,4 @@ const executeBot = (targeturl) =&gt;
         await page.goto(targeturl) 
         await delay(1000 * WAIT_TIME)  // wait WAIT_TIME seconds before exiting
     })
-</code>
-</pre>
+```
